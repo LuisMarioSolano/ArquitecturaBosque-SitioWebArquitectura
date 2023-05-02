@@ -28,6 +28,7 @@ h1,
 h2,
 h3 {
     font-weight: 900;
+    line-height: 1.2;
     margin: 1rem 0 4rem 0;
 }
 
@@ -104,7 +105,7 @@ img {
     font-size: 3rem;
 }
 
-@media (min-width : 768px) {
+@media (min-width : 768px), (min-width : (1200px)) {
     .nombre-sitio {
         font-size: 5rem;
     }
@@ -114,7 +115,7 @@ img {
     font-weight: 900;
 }
 
-@media (min-width : 768px) {
+@media (min-width : 1200px) {
     .barra {
         display: flex;
         justify-content: space-between;
@@ -128,15 +129,13 @@ img {
     align-items: center;
 }
 
-@media (min-width : 768px) {
+@media (min-width : 1200px) {
     .contacto {
         align-items: flex-end;
     }
 }
-
 .telefono {
     display: flex;
-
 }
 
 .telefono::before {
@@ -163,10 +162,9 @@ img {
     margin-top: 1rem;
 }
 
-@media (min-width : 768px) {
+@media (min-width : 1200px) {
     .navegacion {
         flex-direction: row;
-        gap: 2rem;
     }
 }
 
@@ -177,7 +175,7 @@ img {
     text-align: center;
 }
 
-@media (min-width : 768px) {
+@media (min-width : 1200px) {
     .navegacion a {
         padding: 1rem 2rem;
     }
@@ -187,24 +185,58 @@ img {
     background-color: rgb(255 255 255 / .5);
     color: var(--negro);
 }
+
 .slogan {
     text-align: center;
 }
-@media (min-width : 768px) {
+
+@media (min-width : 1200px) {
     .slogan {
         text-align: right;
     }
 }
+
 .slogan h1 {
     font-size: 3rem;
     margin: 0;
 }
-@media (min-width : 768px) {
-    .slogan h1{
+
+@media (min-width : 768px), (min-width : 1200px) {
+    .slogan h1 {
         font-size: 5rem;
     }
 }
+
 .slogan p {
     margin: 0;
     line-height: 1;
+}
+
+/* Sobre Nosotros */
+.nosotros {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    background-image: url(../img/nosotros.jpg);
+    background-position: bottom center;
+    background-repeat: no-repeat;
+}
+
+@media (min-width : 992px) {
+    .nosotros {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.contenido-nosotros {
+    background-color: var(--blanco);
+    padding: 5rem;
+}
+@media (min-width : 992px) {
+    .contenido-nosotros {
+        grid-column: 2 / 4;
+    }
+}
+.contenido-nosotros h2,
+.contenido-nosotros p {
+    margin-bottom: 1rem;
 }
